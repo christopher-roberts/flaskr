@@ -1,12 +1,42 @@
-<!doctype html>
-<!--
-    TODO: implement skeleton style & favicon 
--->
-<title>Flaskr</title>
-<link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/skeleton.css') }}">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Flaskr</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+<!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+<!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/normalize.css') }}">
+  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/skeleton.css') }}">
+  <style>
+  .flash {
+      background: #cee5f5;
+      padding: 0.5em;
+      border: 1px solid #aacbe2
+  }
+  </style>
+
+<!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
 <div class="page">
     <h1>Flaskr</h1>
-    <div class="metanav">
+    <div class="u-pull-right">
         {% if not session.logged_in %}
             <a href="{{ url_for('login') }}">log in</a>
         {% else %}
