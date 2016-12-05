@@ -15,7 +15,7 @@
     {% for entry in entries %}
         <li><h2>{{ entry.title }}</h2>{{ entry.text|safe }}
     {% else %}
-        <li><em>Unelievable. No etries here so far</em>
+        <li><em>No entries here yet.</em>
     {% endfor %}
     </ul>
 {% endblock %}
